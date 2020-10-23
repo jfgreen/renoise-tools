@@ -1,0 +1,39 @@
+#!/bin/bash
+
+set -Eeo pipefail
+
+lua_version=5.1
+
+if [ "$#" -ne 2 ]; then
+    echo "Usage: $0 TASK TOOL-DIR"
+    exit 1
+fi
+
+function set_lua_path {
+    eval $(luarocks path --lua-version ${lua_version})
+}
+
+function get_package_id {
+    xmllint --xpath "string(//RenoiseScriptingTool//Id)" $1/src/manifest.xml
+}
+
+task="$1"
+tool_dir="$2"
+
+case "${task}" in
+    test)
+        set_lua_path
+        busted --directory=$tool_dir -p test_ tests
+    ;;
+    package)
+        archive_name="$(get_package_id $tool_dir).xrnx"
+        echo "Packaging ${tool_dir} into ${archive_name}"
+        zip -jr $archive_name $tool_dir/src
+    ;;
+    *)
+        echo "Invalid task: '${task}'"
+        exit 1
+    ;;
+esac
+
+set +e

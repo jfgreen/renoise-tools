@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RenoiseScriptingTool doc_version="0">
+  <ApiVersion>6</ApiVersion>
+  <Id>engineering.friendly.helloworld</Id>
+  <Version>1.0</Version>
+  <Author>jfgreen</Author>
+  <Name>Scripting Tool Example</Name>
+  <Category>Tool Development</Category>
+  <Description>A XRNX tool that greets the user.</Description>
+  <Homepage>http://friendly.engineering/renoise-tools</Homepage>
+  <Platform>Windows, Mac, Linux</Platform>
+</RenoiseScriptingTool>
