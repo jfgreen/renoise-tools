@@ -1,9 +1,5 @@
-std = {
+stds.renoise = {
    read_globals = {
-   "require",
-   "renoise",
-   "describe",
-   "assert",
-   "it",
+   "renoise"
    }
 }
