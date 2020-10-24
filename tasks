@@ -21,6 +21,10 @@ task="$1"
 tool_dir="$2"
 
 case "${task}" in
+    lint)
+        set_lua_path
+        luacheck $tool_dir
+    ;;
     test)
         set_lua_path
         busted --directory=$tool_dir -p test_ tests
