@@ -2,6 +2,10 @@
 
 A collection of [Renoise](https://renoise.com) tools to speed up my day to day workflow.
 
+| Tool      | Description                           |
+| --------- | ------------------------------------- |
+| freqtable | Displays a table of note frequencies. |
+
 ## Developing
 
 Requirements:
