@@ -27,7 +27,12 @@ case "${task}" in
     ;;
     test)
         set_lua_path
-        busted --directory=$tool_dir -p test_ tests
+        busted \
+            --directory=$tool_dir \
+            -p test_ \
+            -m "./src/?.lua" \
+            -m "./tests/asserts/?.lua" \
+            tests
     ;;
     package)
         archive_name="$(get_package_id $tool_dir).xrnx"

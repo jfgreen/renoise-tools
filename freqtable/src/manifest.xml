@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RenoiseScriptingTool doc_version="0">
+  <ApiVersion>6</ApiVersion>
+  <Id>engineering.friendly.freqtable</Id>
+  <Version>1.0</Version>
+  <Author>jfgreen</Author>
+  <Name>Frequency Table</Name>
+  <Category>Productivy</Category>
+  <Description>A XRNX tool that displays a table of note frequencies.</Description>
+  <Homepage>http://friendly.engineering/renoise-tools</Homepage>
+  <Platform>Windows, Mac, Linux</Platform>
+</RenoiseScriptingTool>
